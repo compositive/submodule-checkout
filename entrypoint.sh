@@ -16,7 +16,7 @@ if [ "$challenge" = "$sig" ]; then
         echo "SSH key detected, attempting private checkout"
         echo "$1" > "$HOME/.ssh/ssh.key"
         chmod 600 "$HOME/.ssh/ssh.key"
-        export GIT_SSH_COMMAND="ssh -i ~/.ssh/ssh.key"
+        export GIT_SSH_COMMAND="ssh -i $HOME/.ssh/ssh.key"
     fi;
 
     git submodule update --init --recursive
