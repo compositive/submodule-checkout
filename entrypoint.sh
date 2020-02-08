@@ -3,8 +3,6 @@
 sig=`cat /github.sig`
 challenge=`ssh-keyscan -t rsa github.com 2>/dev/null | ssh-keygen -lf -`
 
-echo "Working as user $(whoami) [$HOME]"
-
 if [ "$challenge" = "$sig" ]; then
     mkdir "$HOME/.ssh/"
     chmod 700 "$HOME/.ssh/"
