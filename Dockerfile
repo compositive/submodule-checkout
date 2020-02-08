@@ -11,5 +11,6 @@ WORKDIR /github/workspace
 VOLUME /github/workspace
 
 USER runner
+ENV HOME=/home/runner
 
 ENTRYPOINT ["/entrypoint.sh"]
